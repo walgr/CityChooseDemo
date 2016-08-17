@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/recyclerView" />
+
+    <com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+            <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:paddingBottom="8dp"-->
+                <!--android:layout_marginTop="8dp">-->
+
+                <!--<com.lapism.searchview.SearchView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/searchView">-->
+
+                <!--</com.lapism.searchview.SearchView>-->
+
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:text="定位城市"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.wpf.tabview.TabView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tab_gps"
+                    android:layout_marginLeft="8dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:text="热门城市"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp">
+
+                    <com.wpf.tabview.TabView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tab_1"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1" />
+                    <com.wpf.tabview.TabView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tab_2"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1" />
+                    <com.wpf.tabview.TabView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tab_3"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1" />
+                    <com.wpf.tabview.TabView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tab_4"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:text="全国城市"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:id="@+id/quickSidBar"
+        android:visibility="gone">
+
+        <com.bigkoo.quicksidebar.QuickSideBarTipsView
+            android:id="@+id/quickSideBarTipsView"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/quickSideBarView"
+            app:sidebarBackgroundColor="@color/colorPrimary"
+            app:sidebarTextColor="@android:color/white"/>
+
+        <com.bigkoo.quicksidebar.QuickSideBarView
+            android:id="@+id/quickSideBarView"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="45dp"
+            app:sidebarItemHeight="@dimen/height_quicksidebaritem" />
+    </LinearLayout>
+
+</FrameLayout>
